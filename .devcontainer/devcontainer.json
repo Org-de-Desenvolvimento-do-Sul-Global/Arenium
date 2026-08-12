@@ -1,19 +1,22 @@
 {
-    "name": "Node.js Dev",
-    "image": "node:24-alpine",
-
+    "name": "Bun Development",
+    "dockerComposeFile": "compose.yaml",
+    "service": "dev",
+    "workspaceFolder": "/workspace",
     "customizations": {
         "vscode": {
             "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
+                "oven.bun-vscode",
+                "svelte.svelte-vscode",
                 "stivo.tailwind-fold",
-                "svelte.svelte-vscode"
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
             ]
         }
     },
-
-    "forwardPorts": [3000],
-
-    "remoteUser": "node"
+    "forwardPorts": [
+        5173,
+        5432
+    ],
+    "remoteUser": "bun"
 }

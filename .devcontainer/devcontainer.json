@@ -1,0 +1,17 @@
+{
+    "name": "Node.js Dev",
+    "image": "node:24-alpine",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+
+    "forwardPorts": [3000],
+
+    "remoteUser": "node"
+}
